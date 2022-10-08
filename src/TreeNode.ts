@@ -7,7 +7,6 @@ export class TreeNode {
     private right: any;
 
     constructor(operator: IOperator, value: number | null, left: TreeNode | null, right: TreeNode | null) {
-        this.operator = operator;
         this.value = value;
         this.left = left;
         this.right = right;
@@ -17,13 +16,17 @@ export class TreeNode {
         if (this.operator == null) {
             return this.value;
         }
-        return this.operator.performOperation(this.left.result(), this.right.result());
+        const leftNodeResult = this.left.result();
+        const rightNodeResult = this.right.result();
+        return this.operator.performOperation(leftNodeResult, rightNodeResult);
     }
 
     toString = (): string => {
         if (this.operator == null) {
             return this.value.toString();
         }
-        return this.operator.toString(this.left.toString(), this.right.toString());
+        const leftNodeToString = this.left.toString();
+        const rightNodeToString = this.right.toString();
+        return this.operator.toString(leftNodeToString, rightNodeToString);
     };
 }

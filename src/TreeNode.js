@@ -8,15 +8,18 @@ var TreeNode = /** @class */ (function () {
             if (_this.operator == null) {
                 return _this.value;
             }
-            return _this.operator.performOperation(_this.left.result(), _this.right.result());
+            var leftNodeResult = _this.left.result();
+            var rightNodeResult = _this.right.result();
+            return _this.operator.performOperation(leftNodeResult, rightNodeResult);
         };
         this.toString = function () {
             if (_this.operator == null) {
                 return _this.value.toString();
             }
-            return _this.operator.toString(_this.left.toString(), _this.right.toString());
+            var leftNodeToString = _this.left.toString();
+            var rightNodeToString = _this.right.toString();
+            return _this.operator.toString(leftNodeToString, rightNodeToString);
         };
-        this.operator = operator;
         this.value = value;
         this.left = left;
         this.right = right;
