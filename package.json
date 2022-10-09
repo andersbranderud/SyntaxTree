@@ -4,7 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "newinstall": "yarn install --modules-folder ./node_modules"
   },
   "devDependencies": {
     "ts-jest": "^29.0.3",
