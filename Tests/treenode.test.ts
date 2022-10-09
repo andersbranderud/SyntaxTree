@@ -15,7 +15,7 @@ test('assert that tree with no operators return no results.', () => {
 
 // Error test cases
 
-test('tree with operator but no left and right should throw error', () => {
+test('tree with operator but no left and right nodes should throw error', () => {
     const operatorsButNoLeftRightTree =
         expect(() => {
             new TreeNode(
@@ -27,7 +27,7 @@ test('tree with operator but no left and right should throw error', () => {
         }).toThrow(Error);
 })
 
-test('When left/right is set, both of left and right needs to be set.', () => {
+test('When left/right is set, both of left and right nodes need to be set.', () => {
     const operatorsButNoLeftRightTree =
         expect(() => {
             new TreeNode(
