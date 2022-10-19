@@ -2,17 +2,17 @@ import {IOperator} from './Operations/IOperator';
 
 export class TreeNode {
     private readonly operator: IOperator;
-    private readonly value: any;
-    private left: any;
-    private right: any;
+    private readonly value: number | null;
+    private readonly left: TreeNode | null;
+    private readonly right: TreeNode | null;
 
     constructor(operator: IOperator, value: number | null, left: TreeNode | null, right: TreeNode | null) {
         if ((left === null && right !== null) || (left !== null && right === null)) {
-            throw new Error('When left/right is set, both of left and right needs to be set.');
+            throw new Error('When left/right is set, both of left and must be set.');
         }
         
         if (operator !== null && !(left !== null && right !== null)) {
-            throw new Error('When an operator is set; both left and right needs to be set.');
+            throw new Error('When an operator is set; both left and right must be set.');
         }
         
         this.operator = operator;
@@ -25,6 +25,7 @@ export class TreeNode {
         if (this.operator === null) {
             return this.value;
         }
+
         const leftNodeResult = this.left.result();
         const rightNodeResult = this.right.result();
         return this.operator.performOperation(leftNodeResult, rightNodeResult);
@@ -37,6 +38,7 @@ export class TreeNode {
             }
             return '';
         } 
+
         const leftNodeToString = this.left.toString();
         const rightNodeToString = this.right.toString();
         return this.operator.toString(leftNodeToString, rightNodeToString);

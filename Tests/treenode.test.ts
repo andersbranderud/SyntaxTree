@@ -1,7 +1,7 @@
-import {TreeNode} from "../src/TreeNode";
-import {DivisionOperator} from "../src/Operations/DivisionOperator";
-import {strictEqual} from "assert";
-import {TreeConstants} from "./TestData/TreeConstants";
+import {TreeNode} from '../src/TreeNode';
+import {DivisionOperator} from '../src/Operations/DivisionOperator';
+import {strictEqual} from 'assert';
+import {TreeConstants} from './TestData/TreeConstants';
 
 test('assert that valid nested tree gives correct results', () => {
     strictEqual("((7 + ((3 - 2) x 5)) ÷ 6)", TreeConstants.NestedTreeWorking.toString());
