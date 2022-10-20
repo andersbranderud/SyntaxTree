@@ -19,7 +19,7 @@ test('tree with operator but no left and right nodes should throw error', () => 
     const operatorsButNoLeftRightTree =
         expect(() => {
             new TreeNode(
-                new DivisionOperator(),
+                '/',
                 null,
                 null,
                 null
@@ -31,7 +31,7 @@ test('When left/right is set, both of left and right nodes need to be set.', () 
     const operatorsButNoLeftRightTree =
         expect(() => {
             new TreeNode(
-                new DivisionOperator(),
+                "/",
                 null,
                 new TreeNode(null, null, null, null),
                 null

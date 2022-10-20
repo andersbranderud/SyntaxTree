@@ -2,6 +2,6 @@ export interface IOperator
 {
     readonly OperatorUsedInToString: string;
     readonly Operator: number;
-    performOperation(): number;
-    toString(): string;
+    performOperation(operands: number[]): number;
+    toString(operands: string[]): string;
 }
