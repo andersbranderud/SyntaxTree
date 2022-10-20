@@ -1,15 +1,16 @@
 import {TreeNode} from "../../src/TreeNode";
-import {DivisionOperator} from "../../src/Operations/DivisionOperator";
-import {AdditionOperator} from "../../src/Operations/AdditionOperator";
-import {MultiplicationOperator} from "../../src/Operations/MultiplicationOperator";
-import {SubtractionOperator} from "../../src/Operations/SubtractionOperator";
+import {DivisionOperator} from "../../src/Operators/BinaryOperators/DivisionOperator";
+import {AdditionOperator} from "../../src/Operators/BinaryOperators/AdditionOperator";
+import {MultiplicationOperator} from "../../src/Operators/BinaryOperators/MultiplicationOperator";
+import {SubtractionOperator} from "../../src/Operators/BinaryOperators/SubtractionOperator";
 
+// https://stackoverflow.com/questions/17382143/create-a-new-object-from-type-parameter-in-generic-class
 export class TreeConstants {
     static NestedTreeWorking = new TreeNode(
         new DivisionOperator(),
         null,
         new TreeNode(
-            new AdditionOperator(),
+            AdditionOperator,
             null,
             new TreeNode(null, 7, null, null),
             new TreeNode(new MultiplicationOperator(), null,

@@ -1,5 +1,5 @@
 import {TreeNode} from '../src/TreeNode';
-import {DivisionOperator} from '../src/Operations/DivisionOperator';
+import {DivisionOperator} from '../src/Operators/BinaryOperators/DivisionOperator';
 import {strictEqual} from 'assert';
 import {TreeConstants} from './TestData/TreeConstants';
 
