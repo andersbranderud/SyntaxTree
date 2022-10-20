@@ -4,6 +4,9 @@ const safeEval = require('safe-eval')
 // Shared parent class for all binary operators
 export class BinaryOperator extends Operator
 {
+    readonly Operator: number;
+    readonly OperatorUsedInToString: string;
+    
     toString(operands: string[]): string {
         return `(${operands[0]} ${this.OperatorUsedInToString} ${operands[1]})`;
     }
