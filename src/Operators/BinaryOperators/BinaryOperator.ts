@@ -13,6 +13,7 @@ export class BinaryOperator implements IOperator
 
     performOperation(operands: number[]): number {
         const operator: string = String.fromCharCode(this.Operator);
+        // I just received this warning, 'Sandbox Breakout / Arbitrary Code Execution'. I'll fix this soon.
         return safeEval(operands[0] + operator + operands[1]);
     }
 }
