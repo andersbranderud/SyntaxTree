@@ -1,11 +1,10 @@
 import {IOperator} from './Operators/IOperator';
-import {Operator} from "./Operators/Operator";
 import {BinaryOperator} from "./Operators/BinaryOperators/BinaryOperator";
 import {OperatorFactory} from "./Operators/OperatorFactory";
 import {UnaryOperator} from "./Operators/UnaryOperators/UnaryOperator";
 
 export class TreeNode {
-    private readonly operator: Operator | null = null;
+    private readonly operator: IOperator | null = null;
     private readonly value: number | null  = null;
     private readonly firstChild: TreeNode | null  = null;
     private readonly secondChild: TreeNode | null  = null;

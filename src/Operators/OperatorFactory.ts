@@ -1,4 +1,4 @@
-import {Operator} from "./Operator";
+import {IOperator} from "./IOperator";
 import {AdditionOperator} from "./BinaryOperators/AdditionOperator";
 import {SubtractionOperator} from "./BinaryOperators/SubtractionOperator";
 import {DivisionOperator} from "./BinaryOperators/DivisionOperator";
@@ -7,7 +7,7 @@ import {SquareRootOperator} from "./UnaryOperators/SquareRootOperator";
 
 export class OperatorFactory
 {
-    static createOperator(operatorSign: string): Operator {
+    static createOperator(operatorSign: string): IOperator {
         switch (operatorSign) {
             case "+": return new AdditionOperator()
             case "-": return new SubtractionOperator()

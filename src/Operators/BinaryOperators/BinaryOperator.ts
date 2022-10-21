@@ -1,8 +1,8 @@
-import {Operator} from "../Operator";
+import {IOperator} from "../IOperator";
 const safeEval = require('safe-eval')
 
 // Shared parent class for all binary operators
-export class BinaryOperator extends Operator
+export class BinaryOperator implements IOperator
 {
     readonly Operator: number;
     readonly OperatorUsedInToString: string;
