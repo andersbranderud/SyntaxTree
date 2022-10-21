@@ -1,5 +1,4 @@
 import {IOperator} from "../IOperator";
-const safeEval = require('safe-eval')
 
 // Shared parent class for all binary operators
 export abstract class UnaryOperator implements IOperator {

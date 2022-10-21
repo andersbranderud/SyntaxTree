@@ -2,5 +2,8 @@ import {BinaryOperator} from "./BinaryOperator";
 
 export class DivisionOperator extends BinaryOperator{
     override readonly OperatorUsedInToString = '÷';
-    override readonly Operator = '/'.charCodeAt(0);
+
+    performOperation(operands: number[]): number {
+        return (operands[0] / operands[1]);
+    }
 }
